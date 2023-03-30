@@ -133,7 +133,7 @@ const Products = () => {
                   </GridItem>
                   <GridItem m="15px" border="1px black solid" >
                       <Box>
-                          <Image border="1px black solid" width="100%" src="https://lh3.googleusercontent.com/foLW8YoMbdOKH1VyLwqszcBUnHgZq014t9V75MFSQ1bArH3nnC3norZMqIqXLfoRpqpacX21YfHl1tPGtULqtDdGAoSQOw3PHlyuDC_Q" ></Image>
+                          <Image border="1px red solid" width="100%" src="https://lh3.googleusercontent.com/foLW8YoMbdOKH1VyLwqszcBUnHgZq014t9V75MFSQ1bArH3nnC3norZMqIqXLfoRpqpacX21YfHl1tPGtULqtDdGAoSQOw3PHlyuDC_Q" ></Image>
                       </Box>
                       <Box>
                           <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
