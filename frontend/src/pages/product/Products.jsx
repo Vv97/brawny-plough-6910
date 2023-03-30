@@ -131,7 +131,7 @@ const Products = () => {
                           <Box border="1px black solid" padding="5px" borderRadius="20%"> Live Video Call </Box>
                       </Box>
                   </GridItem>
-                  <GridItem m="15px" border="1px red solid" >
+                  <GridItem m="15px" border="1px black solid" >
                       <Box>
                           <Image border="1px black solid" width="100%" src="https://lh3.googleusercontent.com/foLW8YoMbdOKH1VyLwqszcBUnHgZq014t9V75MFSQ1bArH3nnC3norZMqIqXLfoRpqpacX21YfHl1tPGtULqtDdGAoSQOw3PHlyuDC_Q" ></Image>
                       </Box>
