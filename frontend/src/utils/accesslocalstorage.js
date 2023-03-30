@@ -10,7 +10,7 @@ export const getLocalData = (key) => {
 
 
 // set local data 
-export const setLocalDate = (key, data) => {
+export const setLocalData = (key, data) => {
     return localStorage.setItem(key, JSON.stringify(data));
 };
 

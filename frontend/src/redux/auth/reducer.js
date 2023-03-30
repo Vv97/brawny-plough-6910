@@ -1,9 +1,10 @@
+import { getLocalData } from "../../utils/accesslocalstorage";
 import * as types from "./actionTypes"
 
 // auth state intialdata
 const intialstate = {
     isAUth: false,
-    token: "",
+    token: getLocalData("token") || "",
     isError: false,
     isLoading: false
 };
