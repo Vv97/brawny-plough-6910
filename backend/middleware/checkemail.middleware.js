@@ -7,7 +7,7 @@ const checkemail = async (req, res, next) => {
     try {
         let userData = await userModel.findOne({ email });
         if (userData) {
-            res.status(400).send({ message: "email exist already" });
+            res.status(400).send({ mssg: "email exist already" });
         } else {
             next()
         };

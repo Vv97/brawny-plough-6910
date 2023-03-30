@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.login {
+  margin-top: 100px;
+  width: 100%;
+  border: 1px solid green;
+  background-color: rgb(249, 249, 250);
+}
+.loginWrapper {
+  /* border: 1px solid red; */
+
+  /* padding-top: 100px; */
+  padding-bottom: 80px;
+  max-width: 288px;
+  margin: auto;
+}
+
+.loginWrapper > p {
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+.loginFG {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: space-between;
+  padding-top: 10px;
+  /* margin-bottom: 22px; */
+}
+
+.loginFG > div {
+  display: inline-flex;
+  width: 46%;
+  align-items: center;
+  border: 1px solid #ada9ad;
+  height: 30px;
+}
+
+.loginFG > div > p {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  color: #ada9ad;
+  font-weight: 600;
+}
+
+.loginFG > div > svg {
+  text-align: center;
+  width: 30%;
+  /* border: 1px solid red; */
+  font-size: 1.2rem;
+}
+
+.loginForm > div:nth-child(1),
+.loginForm > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm input:not(input[type="submit"], .loginShowpass > input) {
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 12px;
+  border: 1px solid rgb(173, 169, 173);
+}
+
+.loginForm label:not(.loginEmailLabel) {
+  color: rgb(79, 50, 103);
+  font-size: 1rem;
+  line-height: 18px;
+  margin: 12px 0;
+}
+
+.loginEmailLabel {
+  color: rgb(79, 50, 103);
+  font-size: 1rem;
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
+.loginShowpass {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgb(173, 169, 173);
+  box-sizing: border-box;
+}
+
+.loginShowpass > input {
+  width: 82%;
+  border: none;
+  height: 100%;
+  font-size: 1rem;
+  padding: 0 12px;
+  outline: none;
+}
+
+.loginShowpass > button {
+  text-align: center;
+  width: 17%;
+  height: 100%;
+  font-size: 0.7rem;
+  color: #de57e5;
+  border: none;
+  background-color: #fff;
+}
+
+.loginBtn {
+  background: linear-gradient(to right, rgb(222, 87, 229), rgb(136, 99, 251));
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  height: 40px;
+  /* margin: 35px 0; */
+  margin-top: 35px;
+  border-radius: 8px;
+  border: none;
+}
+
+.loginOR {
+  text-align: center;
+  margin: 22px;
+}
+
+.loginOR > span {
+  position: relative;
+  font-size: 0.7rem;
+  color: rgb(157, 159, 164);
+}
+
+.loginOR > span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: rgb(233, 233, 233);
+  top: 50%;
+  left: -48px;
+}
+
+.loginOR > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: rgb(233, 233, 233);
+  top: 50%;
+  right: -48px;
+}
+
+.loginLink {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.loginLink > a {
+  color: rgb(222, 87, 229);
+}

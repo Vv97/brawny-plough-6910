@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.Register {
+  background-color: rgb(249, 249, 250);
+}
+
+.registerWrapper {
+  max-width: 288px;
+  margin: 2rem auto 0 auto;
+  /* border: 1px solid green; */
+}
+
+/* heading */
+.registerHeading {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.underline {
+  margin: 10px auto;
+}
+
+.underline::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgb(222, 87, 229),
+    rgb(136, 99, 251) 76%,
+    rgb(255, 255, 255) 76%,
+    rgb(255, 255, 255) 86%,
+    rgb(136, 99, 251) 86%,
+    rgb(136, 99, 251) 100%
+  );
+}
+
+.loginByFG {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+
+.loginByFG > div:nth-child(3) {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+
+.loginByFG > div:nth-child(3) > div {
+  display: inline-flex;
+  width: 46%;
+  align-items: center;
+  border: 1px solid #ada9ad;
+  height: 30px;
+}
+.loginByFG > div:nth-child(3) > div > p {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  color: #ada9ad;
+  font-weight: 600;
+}
+
+.loginByFG > div:nth-child(3) > div > svg {
+  text-align: center;
+  width: 30%;
+  /* border: 1px solid red; */
+  font-size: 1.2rem;
+}
+
+.registerForm {
+  width: 100%;
+  /* border: 1px solid salmon; */
+}
+
+.registerForm input:not(.registerradio, .registerpasswordShow > input) {
+  width: 100%;
+  margin: 12px 0px;
+  height: 40px;
+  border: 1px solid rgb(173, 169, 173);
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 12px;
+}
+
+.registerForm label:not(.registerGender > div > label) {
+  color: rgb(79, 50, 103);
+  font-size: 1rem;
+  margin: 0px 0px 12px;
+  line-height: 18px;
+}
+
+.registerPhoneNumber {
+  display: flex;
+}
+
+.registerPhoneNumber > div:first-child {
+  width: 70px;
+  margin-right: 20px;
+}
+
+.registerPhoneNumber > div:first-child > input {
+  height: 40px;
+  border: 1px solid rgb(173, 169, 173);
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 12px;
+}
+
+.registerOr {
+  text-align: center;
+  color: #ada9ad;
+  /* border: 1px solid green; */
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.registerOr > span {
+  position: relative;
+}
+
+.registerOr > span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 1.8rem;
+  top: 50%;
+  width: 50px;
+  height: 1px;
+  background-color: #ada9ad93;
+}
+
+.registerOr > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 1.8rem;
+  top: 50%;
+  width: 50px;
+  height: 1px;
+  background-color: #ada9ad93;
+}
+
+.registername {
+  display: flex;
+  gap: 20px;
+}
+
+.registerGender {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
+
+.registerGender > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.registerGender > div > label {
+  font-size: 0.8rem;
+  color: rgb(79, 50, 103);
+  display: flex;
+  align-items: center;
+}
+
+.registerGender > div > input {
+  width: 20px;
+  height: 18px;
+}
+
+.registerpassword > div {
+  display: flex;
+  border: 1px solid #ada9ad;
+  height: 40px;
+  align-items: center;
+  border-radius: 4px;
+  margin: 12px 0px;
+}
+
+.registerpasswordShow > input {
+  width: 82%;
+  outline: none;
+  height: 100%;
+  font-size: 1.2rem;
+  border: none;
+  padding-left: 10px;
+}
+
+.registerpasswordShow > button {
+  width: 17%;
+  font-size: 0.7rem;
+  color: #de57e5;
+  text-align: center;
+  border: none;
+  background-color: #fff;
+}
+
+.registerBtn {
+  background: linear-gradient(to right, rgb(222, 87, 229), rgb(136, 99, 251));
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.registerLoginLink {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.registerLoginLink > a {
+  color: rgb(222, 87, 229);
+}

@@ -11,6 +11,7 @@ const register = (req, res) => {
         lastname,
         gender,
         mobileNumber } = req.body;
+
     try {
         bcyrpt.hash(password, 5, async (err, hash) => {
             if (password == confirmPassword) {
