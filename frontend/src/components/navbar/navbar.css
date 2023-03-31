@@ -1,0 +1,51 @@
+#nav__main{
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ #nav__top{
+     border:1px solid black;
+     height:2rem;
+     width:100%;
+     background-color:rgb(62, 14, 107);
+ }
+ 
+ #nav__medium{
+     border:1px solid black;
+     display: grid;
+     grid-template-columns: 10% 35% 20% 30%;
+     align-items: center;
+     column-gap: 2rem;;
+     /* height:4rem; */
+     width:100%;
+     padding:1rem;
+     background-color: rgb(245, 249, 255);
+ }
+ 
+ #nav__logo{
+     border:1px solid black;
+ }
+ #nav__logo>img{
+     border:1px solid black;
+     height:100%;
+     width:100%
+ }
+ #nav__menu{
+     border:1px solid black;
+ }
+ #nav__search{
+     border:1px solid black;
+ }
+ #nav__auth__menu{
+     border:1px solid black;
+     display: flex;
+     align-items:center;
+     gap:1rem;
+ }
+ 
+ #con__logo>img{
+     border-radius: 50%;
+ }
+ 
