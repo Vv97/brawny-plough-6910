@@ -28,3 +28,4 @@ export const loginSuccess = (payload) => {
 export const loginFailed = () => {
     return { type: types.LOGIN_FAILED };
 };
+

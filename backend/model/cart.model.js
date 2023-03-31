@@ -1,20 +1,69 @@
 const mongoose = require("mongoose");
 
 const cartSchema = mongoose.Schema({
-    title: {
+    name: {
         type: String,
-        Request: true
+        require: true
     },
 
-    device: {
+    description: {
         type: String,
-        Request: true
+        require: true
     },
 
-
-    body: {
+    image1: {
         type: String,
-        Request: true
+        require: true
+    },
+
+    image2: {
+        type: String,
+        require: true
+    },
+
+    rating: {
+        type: Number,
+        require: true
+    },
+
+    price: {
+        type: Number,
+        require: true
+    },
+
+    discount: {
+        type: String,
+        require: true
+    },
+
+    availability: {
+        type: String,
+        require: true
+    },
+
+    vedio: {
+        type: String,
+        require: true
+    },
+
+    jewellerytype: {
+        type: String,
+        require: true
+    },
+
+    category: {
+        type: String,
+        require: true
+    },
+
+    size: {
+        type: Number,
+        require: true
+    },
+
+    material: {
+        type: String,
+        require: true
     },
 
     userID: {
@@ -24,6 +73,7 @@ const cartSchema = mongoose.Schema({
     versionKey: false
 });
 
+
 const cartModel = mongoose.model("cart", cartSchema);
 
-module.exports = cartModel;
+module.exports = cartModel

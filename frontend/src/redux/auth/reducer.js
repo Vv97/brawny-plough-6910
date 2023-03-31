@@ -1,9 +1,9 @@
-import { getLocalData } from "../../utils/accesslocalstorage";
+import { getLocalData, setLocalData } from "../../utils/accesslocalstorage";
 import * as types from "./actionTypes"
 
 // auth state intialdata
 const intialstate = {
-    isAUth: false,
+    isAuth: getLocalData("isAuth") || false,
     token: getLocalData("token") || "",
     isError: false,
     isLoading: false
@@ -27,9 +27,12 @@ export const reducer = (state = intialstate, { type, payload }) => {
         case types.LOGIN_REQUEST:
             return { ...state, isLoading: true };
         case types.LOGIN_SUCCESS:
-            return { ...state, isLoading: true, token: payload };
+            setLocalData("isAuth", true)
+            return { ...state, isLoading: true, token: payload, isAuth: true };
         case types.LOGIN_FAILED:
             return { ...state, isLoading: false, isError: true };
+
+        // default state
         default:
             return state;
     };

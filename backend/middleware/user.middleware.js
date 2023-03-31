@@ -5,13 +5,17 @@ const jwt = require("jsonwebtoken");
 const checkToken = (req, res, next) => {
     let auth = req.headers.authorization;
     try {
-        let { userID } = jwt.verify(auth, "volvo");
-        if (req.method == "POST" || req.method == "GET") {
-            req.body.userID = userID;
+        let { userID } = jwt.verify(auth, process.env.jwtkey);
+        if (userID) {
+            if (req.method == "POST" || req.method == "GET") {
+                req.body.userID = userID;
+            }
+            next()
+        } else {
+            res.status(400).send({ mssg: "register required!" })
         }
-        next()
     } catch (error) {
-        res.status(400).send({ mssg: "require sighup!" })
+        res.status(400).send(error)
     }
 }
 
