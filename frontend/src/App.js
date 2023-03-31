@@ -9,8 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      {/* <ToastContainer
+      <ToastContainer
         position="top-center"
         autoClose={2000}
         hideProgressBar={false}
@@ -21,9 +20,8 @@ function App() {
         draggable
         pauseOnHover
         theme="light"
-      /> */}
-      {/* <AllRoutes /> */}
-      {/* <Footer/> */}
+      />
+      <AllRoutes />
     </div>
   );
 }
