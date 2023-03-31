@@ -1,6 +1,9 @@
 import React from "react";
 import { Box, Button, Center, Flex, Grid, GridItem, Image, Input, Select, Text } from "@chakra-ui/react";
-import {BiRupee} from "react-icons/bi"
+import { BiRupee } from "react-icons/bi"
+import { ImHome3 } from "react-icons/im"
+import { FcVideoCall } from "react-icons/fc"
+import {BsHeart} from "react-icons/bs"
 const Products = () => {
   return (
     <Box>
@@ -118,84 +121,121 @@ const Products = () => {
                   </Box>
               </Box>
               <Grid templateColumns="repeat(3,1fr)"  className="product-list" border="1px red solid" ml="30px" gap="10px">
-                  <GridItem m="15px" border="1px red solid" >
+                  <GridItem m="15px" border="1px red solid"  >
                       <Box>
-                          <Image border="1px black solid" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
+                          <Image boxShadow= "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" cursor="pointer" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
                       </Box>
                       <Box>
-                          <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                          <Flex justifyContent="space-between" mr="15px" >
+                              <Box>
+                              <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                              </Box>
+                            
+                              <Box cursor="pointer"> <BsHeart/> </Box>
+                          </Flex>
                           <Text color="gray" mt="0" > Splendid Stary Diamond Ring </Text>
                       </Box>
-                      <Box display="flex" justifyContent="space-between" fontSize="13px" m="5px"  > 
-                          <Button size="sm" border="1px black solid" padding="5px" borderRadius="8px" > Book Try At Home </Button>
-                          <Button size="sm" border="1px black solid" padding="5px" borderRadius="20%"> Live Video Call </Button>
+                      <Box display="flex" justifyContent="space-between"   m="5px"  > 
+                          <Button size="sm" cursor="pointer" border="1px purple solid" padding="10px" color="purple" fontSize="11px"  borderRadius="8px" > <ImHome3 />Book Try At Home </Button>
+                          <Button size="sm" cursor="pointer" border="1px green solid" padding="10px" color="green" fontSize="11px" borderRadius="8px"> <FcVideoCall /> Live Video Call </Button>
                       </Box>
                   </GridItem>
-                  <GridItem m="15px" border="1px black solid" >
+                  <GridItem m="15px" border="1px red solid"  >
                       <Box>
-                          <Image border="1px red solid" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
+                          <Image boxShadow= "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" cursor="pointer" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
                       </Box>
                       <Box>
-                          <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                          <Flex justifyContent="space-between" mr="15px" >
+                              <Box>
+                              <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                              </Box>
+                            
+                              <Box cursor="pointer"> <BsHeart/> </Box>
+                          </Flex>
                           <Text color="gray" mt="0" > Splendid Stary Diamond Ring </Text>
                       </Box>
-                      <Box display="flex" justifyContent="space-between" fontSize="13px" m="5px"  > 
-                          <Button border="1px black solid" padding="5px" borderRadius="20%" > Book Try At Home </Button>
-                          <Button border="1px black solid" padding="5px" borderRadius="20%"> Live Video Call </Button>
+                      <Box display="flex" justifyContent="space-between"   m="5px"  > 
+                          <Button size="sm" cursor="pointer" border="1px purple solid" padding="10px" color="purple" fontSize="11px"  borderRadius="8px" > <ImHome3 />Book Try At Home </Button>
+                          <Button size="sm" cursor="pointer" border="1px green solid" padding="10px" color="green" fontSize="11px" borderRadius="8px"> <FcVideoCall /> Live Video Call </Button>
                       </Box>
                   </GridItem>
-                  <GridItem m="15px" border="1px red solid" >
+                  <GridItem m="15px" border="1px red solid"  >
                       <Box>
-                          <Image border="1px black solid" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
+                          <Image boxShadow= "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" cursor="pointer" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
                       </Box>
                       <Box>
-                          <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                          <Flex justifyContent="space-between" mr="15px" >
+                              <Box>
+                              <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                              </Box>
+                            
+                              <Box cursor="pointer"> <BsHeart/> </Box>
+                          </Flex>
                           <Text color="gray" mt="0" > Splendid Stary Diamond Ring </Text>
                       </Box>
-                      <Box display="flex" justifyContent="space-between" fontSize="13px" m="5px"  > 
-                          <Button border="1px black solid" padding="5px" borderRadius="20%" > Book Try At Home </Button>
-                          <Button border="1px black solid" padding="5px" borderRadius="20%"> Live Video Call </Button>
+                      <Box display="flex" justifyContent="space-between"   m="5px"  > 
+                          <Button size="sm" cursor="pointer" border="1px purple solid" padding="10px" color="purple" fontSize="11px"  borderRadius="8px" > <ImHome3 />Book Try At Home </Button>
+                          <Button size="sm" cursor="pointer" border="1px green solid" padding="10px" color="green" fontSize="11px" borderRadius="8px"> <FcVideoCall /> Live Video Call </Button>
                       </Box>
                   </GridItem>
-                  <GridItem m="15px" border="1px red solid" >
+                  <GridItem m="15px" border="1px red solid"  >
                       <Box>
-                          <Image border="1px black solid" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
+                          <Image boxShadow= "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" cursor="pointer" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
                       </Box>
                       <Box>
-                          <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                          <Flex justifyContent="space-between" mr="15px" >
+                              <Box>
+                              <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                              </Box>
+                            
+                              <Box cursor="pointer"> <BsHeart/> </Box>
+                          </Flex>
                           <Text color="gray" mt="0" > Splendid Stary Diamond Ring </Text>
                       </Box>
-                      <Box display="flex" justifyContent="space-between" fontSize="13px" m="5px"  > 
-                          <Button border="1px black solid" padding="5px" borderRadius="20%" > Book Try At Home </Button>
-                          <Button border="1px black solid" padding="5px" borderRadius="20%"> Live Video Call </Button>
+                      <Box display="flex" justifyContent="space-between"   m="5px"  > 
+                          <Button size="sm" cursor="pointer" border="1px purple solid" padding="10px" color="purple" fontSize="11px"  borderRadius="8px" > <ImHome3 />Book Try At Home </Button>
+                          <Button size="sm" cursor="pointer" border="1px green solid" padding="10px" color="green" fontSize="11px" borderRadius="8px"> <FcVideoCall /> Live Video Call </Button>
                       </Box>
                   </GridItem>
-                  <GridItem m="15px" border="1px red solid" >
+                  <GridItem m="15px" border="1px red solid"  >
                       <Box>
-                          <Image border="1px black solid" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
+                          <Image boxShadow= "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" cursor="pointer" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
                       </Box>
                       <Box>
-                          <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                          <Flex justifyContent="space-between" mr="15px" >
+                              <Box>
+                              <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                              </Box>
+                            
+                              <Box cursor="pointer"> <BsHeart/> </Box>
+                          </Flex>
                           <Text color="gray" mt="0" > Splendid Stary Diamond Ring </Text>
                       </Box>
-                      <Box display="flex" justifyContent="space-between" fontSize="13px" m="5px"  > 
-                          <Button border="1px black solid" padding="5px" borderRadius="20%" > Book Try At Home </Button>
-                          <Button border="1px black solid" padding="5px" borderRadius="20%"> Live Video Call </Button>
+                      <Box display="flex" justifyContent="space-between"   m="5px"  > 
+                          <Button size="sm" cursor="pointer" border="1px purple solid" padding="10px" color="purple" fontSize="11px"  borderRadius="8px" > <ImHome3 />Book Try At Home </Button>
+                          <Button size="sm" cursor="pointer" border="1px green solid" padding="10px" color="green" fontSize="11px" borderRadius="8px"> <FcVideoCall /> Live Video Call </Button>
                       </Box>
                   </GridItem>
-                  <GridItem m="15px" border="1px red solid" >
+                  <GridItem m="15px" border="1px red solid"  >
                       <Box>
-                          <Image border="1px black solid" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
+                          <Image boxShadow= "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" cursor="pointer" width="100%" src="https://cdn.caratlane.com/media/catalog/product/cache/6/image/480x480/9df78eab33525d08d6e5fb8d27136e95/J/R/JR07313-1YP6P0_11_listfront.jpg" ></Image>
                       </Box>
                       <Box>
-                          <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                          <Flex justifyContent="space-between" mr="15px" >
+                              <Box>
+                              <Text as="b" > <BiRupee />30,929 </Text> <Text fontSize="12px" as="del" >32,999</Text>
+                              </Box>
+                            
+                              <Box cursor="pointer"> <BsHeart/> </Box>
+                          </Flex>
                           <Text color="gray" mt="0" > Splendid Stary Diamond Ring </Text>
                       </Box>
-                      <Box display="flex" justifyContent="space-between" fontSize="13px" m="5px"  > 
-                          <Button border="1px black solid" padding="5px" borderRadius="20%" > Book Try At Home </Button>
-                          <Button border="1px black solid" padding="5px" borderRadius="20%"> Live Video Call </Button>
+                      <Box display="flex" justifyContent="space-between"   m="5px"  > 
+                          <Button size="sm" cursor="pointer" border="1px purple solid" padding="10px" color="purple" fontSize="11px"  borderRadius="8px" > <ImHome3 />Book Try At Home </Button>
+                          <Button size="sm" cursor="pointer" border="1px green solid" padding="10px" color="green" fontSize="11px" borderRadius="8px"> <FcVideoCall /> Live Video Call </Button>
                       </Box>
                   </GridItem>
+                  
                   
                   
               </Grid>
