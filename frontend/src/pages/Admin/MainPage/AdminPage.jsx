@@ -63,6 +63,8 @@ import AdminDrawer from "./AdminDrawer";
 // import { useDispatch, useSelector } from "react-redux";
 // import { getAdminAdmin } from "../../Redux/admin/admin.action";
 import { Link, useNavigate } from "react-router-dom";
+import caratLogo from "../../../utils/Images/caratLogo.png"
+
 
 
 
@@ -95,8 +97,8 @@ export default function AdminPage() {
           flexDirection={"column"}
           w={{ md: "30%", lg: "20%" }}
           padding={"15px"}
-          backgroundColor={"#439A97"}
-          color={"white"}
+          backgroundColor={"#d8b0f7"}
+          color={"black"}
           position={"fixed"}
           top={0}
           left={0}
@@ -105,12 +107,13 @@ export default function AdminPage() {
           <Box width={"60%"} m={"auto"} mt={0} mb={0}>
             <Image
               alt="logo"
-              src="/images/koolz-logo.png"
+              src={caratLogo}
+              width={"120px"}
             ></Image>
           </Box>
 
           <Box textAlign={"center"} mt={"20px"}>
-            <Avatar border='2px' size={"2xl"} src={"https://avatars.githubusercontent.com/u/98110085?v=4"}></Avatar>
+            <Avatar border='2px' size={"xl"} src={"https://avatars.githubusercontent.com/u/98110085?v=4"}></Avatar>
           </Box>
           <Box textAlign={"center"} mt={"20px"} mb={"20px"}>
             <Text>{"DemoName"}</Text>
@@ -126,8 +129,8 @@ export default function AdminPage() {
             borderRadius={"5px"}
             // transition={"0.8s"}
             _selected={{
-              color: "black",
-              bg: "#97DECE",
+              color: "white",
+              bg: "#9442d4",
               transform: "scale(1.05)",
               transition: "0.8s",
             }}
@@ -140,8 +143,8 @@ export default function AdminPage() {
             borderRadius={"5px"}
             // transition={"0.8s"}
             _selected={{
-              color: "black",
-              bg: "#97DECE",
+              color: "white",
+              bg: "#9442d4",
               transform: "scale(1.05)",
               transition: "0.8s",
             }}
@@ -154,8 +157,8 @@ export default function AdminPage() {
             borderRadius={"5px"}
             // transition={"0.8s"}
             _selected={{
-              color: "black",
-              bg: "#97DECE",
+              color: "white",
+              bg: "#9442d4",
               transform: "scale(1.05)",
               transition: "0.8s",
             }}
@@ -169,8 +172,8 @@ export default function AdminPage() {
            
             // transition={"0.8s"}
             _selected={{
-              color: "black",
-              bg: "#97DECE",
+              color: "white",
+              bg: "#9442d4",
               transform: "scale(1.05)",
               transition: "0.8s",
             }}
@@ -186,8 +189,8 @@ export default function AdminPage() {
             borderRadius={"5px"}
             // transition={"0.8s"}
             _selected={{
-              color: "black",
-              bg: "#97DECE",
+              color: "white",
+              bg: "#9442d4",
               transform: "scale(1.05)",
               transition: "0.8s",
             }}
@@ -199,6 +202,7 @@ export default function AdminPage() {
             variant={"solid"}
             borderRadius={"5px"}
             colorScheme={"red"}
+            p={"8px"}
            onClick={handleRoute}
           >
             Logout
@@ -251,10 +255,10 @@ export default function AdminPage() {
         <Box>
           <Menu>
             <MenuButton pr='15px'>
-              <Avatar  src={'https://avatars.githubusercontent.com/u/110043714?v=4'} name={'Onkar.k'}></Avatar>
+              <Avatar  src={'https://avatars.githubusercontent.com/u/110043714?v=4'} name={'Admin'}></Avatar>
             </MenuButton>
-            <MenuList backgroundColor={"#439A97"} border={"1px solid #439A97"}>
-              <MenuItem backgroundColor={"#439A97"}>
+            <MenuList backgroundColor={"#9258bf"} border={"1px solid #9258bf"}>
+              <MenuItem backgroundColor={"#9258bf"}>
                 <Box
                   onClick={() => {
                     accountRef.current.click();
@@ -272,16 +276,17 @@ export default function AdminPage() {
                 </Box>
               </MenuItem>
               <MenuDivider />
-              <MenuItem backgroundColor={"#06096B4"} color={"red.600"}>
+              <MenuItem color={"red.100"}>
                 <Box
                   display={"flex"}
                   justifyContent={"center"}
                   alignItems={"center"}
-                  fontSize={"2xl"}
+                  fontSize={"xl"}
+                  fontWeight={"light"}
                 >
-                  {" "}
-                  <FiLogOut />{" "}
-                  <Link  to='/' >
+                  {/* {" "}
+                  <FiLogOut />{" "} */}
+                  <Link  to='/'>
                     Logout
                   </Link>
                 </Box>
