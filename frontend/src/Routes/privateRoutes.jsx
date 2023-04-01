@@ -4,7 +4,7 @@ import { Navigate, useLocation } from "react-router-dom";
 
 export const privateRoutes = ({ Children }) => {
   const isAuth = useSelector((store) => store.authReducer.isAuth);
-  const loaction = useLocation();
+  const location = useLocation();
 
   if (!isAuth) {
     return <Navigate state={location.pathname} to="/register" />;
