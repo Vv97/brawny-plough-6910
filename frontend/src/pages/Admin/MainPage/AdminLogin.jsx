@@ -19,6 +19,11 @@ const AdminLogin = () => {
     setLoginDetails(newDetails);
   };
 
+  const handleLogin = () =>{
+    let data = axios.get(`https://magenta-penguin-tie.cyclic.app/products`);
+    console.log(data)
+  }
+
   return (
     <>
       <Image alt="logo" src={caratLogo} width={"180px"} m={2}></Image>
@@ -64,6 +69,7 @@ const AdminLogin = () => {
               Forgot Your Password?
             </Text>
             <Button
+              onClick={handleLogin}
               variant={"solid"}
               bgGradient="linear(to-l, #7928CA, #FF0080)"
               color={"white"}
