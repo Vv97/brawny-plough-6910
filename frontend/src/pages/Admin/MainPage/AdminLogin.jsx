@@ -4,6 +4,8 @@ import { Image } from "@chakra-ui/image";
 import { Input } from "@chakra-ui/input";
 import { Flex, Heading, Text, VStack, Box } from "@chakra-ui/layout";
 import caratLogo from "../../../utils/Images/caratLogo.png";
+import axios from "axios"
+
 
 const AdminLogin = () => {
   const [loginDetails, setLoginDetails] = React.useState({
