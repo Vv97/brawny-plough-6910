@@ -8,7 +8,7 @@ import { loginFailed, loginRequest, loginSuccess, registerFailed, registerReques
 export const register = (data) => (dispatch) => {
     // here making request to the server
     dispatch(registerRequest());
-    return axios.post("http://localhost:8080/user/register", data)
+    return axios.post(process.env.REACT_APP_REGISTER_URL, data)
         .then(res => {
             toast.success(res.data.mssg);
             dispatch(registerSuccess());
@@ -25,9 +25,8 @@ export const register = (data) => (dispatch) => {
 
 // login 
 export const login = (data) => (dispatch) => {
-    console.log(process.env.RECAT_APP_LOGIN_URL)
     dispatch(loginRequest());
-    return axios.post("http://localhost:8080/user/login", data)
+    return axios.post(process.env.REACT_APP_LOGIN_URL, data)
         .then(res => {
             toast.success(res.data.mssg);
             setLocalData("token", res.data.token);
