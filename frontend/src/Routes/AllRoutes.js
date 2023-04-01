@@ -6,6 +6,7 @@ import AdminPage from "../pages/Admin/MainPage/AdminPage";
 import { Register } from "../pages/register/Register";
 import { Login } from "../pages/login/Login";
 import CartItem from "../pages/CartItem/CartItem";
+import AdminLogin from "../pages/Admin/MainPage/AdminLogin";
 
 
 export const AllRoutes = () => {
@@ -17,6 +18,7 @@ export const AllRoutes = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             {/* <Route path="/cart" element={<CartItem />} /> */}
+            <Route path="/adminlogin" element={<AdminLogin/>} />
         </Routes>
     );
 };
