@@ -81,8 +81,8 @@ We using different kinds of the technologies to make this website. These things 
 
  Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-- [x] Vikrant Prajapati - [GitHub Profile](https://github.com/stormyvikrant)
-- [x] Mukesh Kaushal - [GitHub Profile](https://github.com/imukeshkaushal) 
-- [x] Priyank Gupta - [GitHub Profile](https://github.com/priyankfz7)
-- [x] Biswadip Roy - [GitHub Profile](https://github.com/amREDOX)
+- [x] Vishal Verma - [GitHub Profile](https://github.com/Vv97)
+- [x] Shoaib Akhtar - [GitHub Profile](https://github.com/ShoaibSanjri) 
+- [x] Sumit Kumar - [GitHub Profile](https://github.com/sumitkprasad123)
+- [x] Arun Kumar Rana - [GitHub Profile](https://github.com/arun24hrs)
 - [x] Satyaranjan Maity - [GitHub Profile](https://github.com/Satyaranjan8414)
