@@ -8,12 +8,14 @@ import { Login } from "../pages/login/Login";
 import CartItem from "../pages/CartItem/CartItem";
 import AdminLogin from "../pages/Admin/MainPage/AdminLogin";
 import SingleProduct from "../pages/product/SingleProduct";
+import Address from "../pages/Address/Address";
+// import AdminLogin from "../pages/Admin/MainPage/AdminLogin";
 
 
 export const AllRoutes = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<CartItem />} />
             <Route path="/products" element={<Products />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/register" element={<Register />} />
@@ -21,6 +23,10 @@ export const AllRoutes = () => {
             {/* <Route path="/cart" element={<CartItem />} /> */}
             <Route path="/adminlogin" element={<AdminLogin />} />
             <Route path="/singleproduct/:id" element={<SingleProduct />} />
+            <Route path="/cart/address" element={<Address/>} />
+            
+       <Route path="/cart" element={<CartItem />} /> 
+            {/* <Route path="/adminlogin" element={<AdminLogin/>} /> */}
         </Routes>
     );
 };
