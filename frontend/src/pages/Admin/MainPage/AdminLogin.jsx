@@ -9,7 +9,6 @@ import {useNavigate} from "react-router-dom"
 import { adminLogin } from "../../../redux/adminAuth/api";
 import { useDispatch } from "react-redux";
 
-
 const AdminLogin = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();

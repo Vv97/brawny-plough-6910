@@ -25,7 +25,6 @@ import Dashbord from "../Tabpanel/Dashboard";
 // import Customers from "../Tabpanel/Customers";
 import AccountInfo from "../Tabpanel/AccountInfo";
 import { useDispatch } from "react-redux";
-// import { getAdminAdmin } from "../../Redux/admin/admin.action";
 import { Link, useNavigate } from "react-router-dom";
 import caratLogo from "../../../utils/Images/caratLogo.png"
 import { adminLogout } from "../../../redux/adminAuth/api";
@@ -58,7 +57,7 @@ export default function AdminPage() {
         authorization: adminToken
       }
     }
-    axios.get(`https://magenta-penguin-tie.cyclic.app/products`, options)
+    axios.get(`https://magenta-penguin-tie.cyclic.app/products?page=3`, options)
     .then((res )=> setAllData(res.data));
   },[])
 
