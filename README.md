@@ -52,8 +52,8 @@ Homepage is one of the most important factor which also known by the name of Lan
 ### Navbar
 
 Navigation Bar is the topmost layer or bar of our website. In this bar, you find the various types of the menus like Brands, Sale, Makeup, HairCare, Login, Register, Add to Cart Page etc.
+![Screenshot (344)](https://user-images.githubusercontent.com/107980582/229372428-cf4d02cf-8a9a-47ae-90dd-938635d2dde3.png)
 
-<!-- ![image](https://user-images.githubusercontent.com/97522154/208037197-8aa65996-50ee-4518-b64a-bf51f0e81242.png) -->
 
 <!-- ![image](https://user-images.githubusercontent.com/97522154/208038091-dfbe02c0-d7ae-4fce-88c6-5cab2a7d40d1.png) -->
 
