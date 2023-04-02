@@ -2,7 +2,7 @@
 Caratlane.com is an online jewelry retailer based in India. It offers a wide selection of jewelry including rings, necklaces, earrings, pendants and bracelets, as well as engagement and wedding jewelry. The company also offers customization services and the ability to shop for jewelry based on budget, occasion and style.
 ## Deployed Link
 
-Visit : 
+Visit : https://frontend-vv97.vercel.app/
 
 ## Responsive for all screen sizes
 
