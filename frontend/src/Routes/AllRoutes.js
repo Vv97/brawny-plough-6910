@@ -15,17 +15,17 @@ import Address from "../pages/Address/Address";
 export const AllRoutes = () => {
     return (
         <Routes>
-            <Route path="/" element={<CartItem />} />
+            <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
-            {/* <Route path="/cart" element={<CartItem />} /> */}
+            <Route path="/cart" element={<CartItem />} />
             <Route path="/adminlogin" element={<AdminLogin />} />
             <Route path="/singleproduct/:id" element={<SingleProduct />} />
-            <Route path="/cart/address" element={<Address/>} />
-            
-       <Route path="/cart" element={<CartItem />} /> 
+            <Route path="/cart/address" element={<Address />} />
+
+            <Route path="/cart" element={<CartItem />} />
             {/* <Route path="/adminlogin" element={<AdminLogin/>} /> */}
         </Routes>
     );
