@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { getProducts, addProduct, updateProduct, deleteProduct } = require("../controller/products.controller");
+const { getProducts, addProduct, updateProduct, deleteProduct, getProductById } = require("../controller/products.controller");
 const productModel = require("../model/products.model");
 const productRoutes = Router();
 
@@ -14,5 +14,7 @@ productRoutes.patch("/:productId", updateProduct);
 
 // delete product
 productRoutes.delete("/:deleteId", deleteProduct)
+
+productRoutes.get("/:productID", getProductById)
 
 module.exports = productRoutes;
