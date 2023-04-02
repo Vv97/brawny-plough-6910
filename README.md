@@ -67,7 +67,8 @@ It is a cart Page where you find the different kinds of the products which produ
 
 As you know that every website have the header and footer. Also in this this website, we have a pritty footer which helps you to move the different kinds of the important pages.
 
-<!-- ![image](https://user-images.githubusercontent.com/97522154/208039642-1f75bf50-33f3-4c47-81cd-24fda0a4ed0b.png) -->
+
+![Screenshot (355)](https://user-images.githubusercontent.com/107980582/229373691-d2a5732e-c8bb-442f-9ba8-00be919dd1f4.png)
 
 So, this is the footer of our website clone. All the things in quite easy to use as well as mobile, teblet and desktop. We hope you like these things.
 
