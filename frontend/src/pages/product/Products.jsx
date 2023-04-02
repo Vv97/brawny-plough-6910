@@ -16,9 +16,18 @@ import { ImHome3 } from "react-icons/im";
 import { FcVideoCall } from "react-icons/fc";
 import { BsHeart } from "react-icons/bs";
 import axios from "axios";
+import SingleProduct from "./SingleProduct"
+import { Navigate, useNavigate } from "react-router-dom";
 const Products = () => {
   const [productData, setProductData] = useState([]);
-
+    const navigate = useNavigate()
+    const prodFun = (id) => {
+        // console.log("id", id)
+        
+        navigate(`/singleproduct/${id}`)
+       
+        
+    }
   useEffect(() => {
     // fetch("https://magenta-penguin-tie.cyclic.app/products", {
     //     headers: {
@@ -26,16 +35,18 @@ const Products = () => {
     //     }
     // }).then(res => res.json()).then(res => console.log(res))
     // console.log("data",data)
-    fetch("https://magenta-penguin-tie.cyclic.app/products", {
+    axios
+      .get("https://magenta-penguin-tie.cyclic.app/products", {
         headers: {
           authorization:
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1MjgwYWU0NWY4MWJlODkzYjBkZDciLCJpYXQiOjE2ODAyMDE3NjJ9.y88YsqEDM5sU_tLGcryhbaKrfNkF-ZI4fePxnHShQ2k",
         },
       })
-          .then((res) => res.json()).then(res => setProductData(res.data));
-      console.log(productData[0])
+      .then((res) => setProductData(res.data));
+    //   console.log(productData[0])
   }, []);
 
+    
   return (
     <Box>
       <Image
@@ -46,13 +57,13 @@ const Products = () => {
         className="filter-navbar"
         bg="#b3d4fc"
         h="80px"
-        border="1px red solid"
+        // 
         display="flex"
         justifyContent="space-between"
       >
         <Flex
           direction="row"
-          border="1px red solid"
+          
           gap="15px"
           fontSize="13px"
           padding="20px"
@@ -112,14 +123,15 @@ const Products = () => {
           </Select>
         </Box>
       </Box>
-      <Box border="1px red solid" m="25px" display="flex">
+      <Box  m="25px" display="flex" >
         <Box
           className="filter"
           width="25%"
           boxShadow=" rgba(0, 0, 0, 0.24) 0px 3px 8px"
-          ml="10px"
+                  ml="10px"
+                  
         >
-          <Box border="1px red solid" w="90%" m="auto" mt="10px">
+          <Box  w="90%" m="auto" mt="10px">
             <Center bg="#F6F3F9" padding="10px" borderRadius="20%">
               {" "}
               Filter By{" "}
@@ -218,14 +230,18 @@ const Products = () => {
         <Grid
           templateColumns="repeat(3,1fr)"
           className="product-list"
-          border="1px red solid"
+          border="1px solid black"
           ml="30px"
           gap="10px"
-        >
-                  {productData.map((prod) => {
-                      console.log("data", prod);
-            <GridItem m="15px" border="1px red solid">
-              <Box>
+              >
+                
+            
+          {productData.length > 0 && productData.map((prod) => {
+            
+            return (
+            <GridItem onClick={() => prodFun(prod._id)} key={prod.price} m="15px" >
+                <Box>
+                    
                 <Image
                   boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
                   cursor="pointer"
@@ -239,10 +255,10 @@ const Products = () => {
                     <Text as="b">
                       {" "}
                       <BiRupee />
-                      {prod.price}
+                      {prod.price - prod.price*prod.discount/100}
                     </Text>{" "}
                     <Text fontSize="12px" as="del">
-                      32,999
+                      {prod.price}
                     </Text>
                   </Box>
 
@@ -283,7 +299,8 @@ const Products = () => {
                   <FcVideoCall /> Live Video Call{" "}
                 </Button>
               </Box>
-            </GridItem>;
+                  </GridItem>
+            )
           })}
         </Grid>
       </Box>
