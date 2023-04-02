@@ -34,7 +34,7 @@
 
 // export default Admin
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Text,
   Tabs,
@@ -56,35 +56,51 @@ import {
 import { FiLogOut } from "react-icons/fi";
 import { AiFillInfoCircle } from "react-icons/ai";
 import AdminDrawer from "./AdminDrawer";
-// import Dashbord from "../Tabpanel/Dashboard";
-// import Listing from "../Tabpanel/Listing";
+import Dashbord from "../Tabpanel/Dashboard";
+
 // import Customers from "../Tabpanel/Customers";
-// import AccountInfo from "../Tabpanel/AccountInfo";
-// import { useDispatch, useSelector } from "react-redux";
+import AccountInfo from "../Tabpanel/AccountInfo";
+import { useDispatch } from "react-redux";
 // import { getAdminAdmin } from "../../Redux/admin/admin.action";
 import { Link, useNavigate } from "react-router-dom";
 import caratLogo from "../../../utils/Images/caratLogo.png"
-
-
+import { adminLogout } from "../../../redux/adminAuth/api";
+import axios from "axios";
+import Listing from "../Tabpanel/Listing";
+import Orders from "../Tabpanel/Orders";
 
 
 export default function AdminPage() {
-  // const admin = useSelector((store)=>store.adminReducer.admin)
-  // const dispatch = useDispatch()
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
+  let [allData, setAllData] = useState([]);
+  const dispatch = useDispatch()
   const prodRef= useRef();
   const dashboardRef = useRef();
   const customerRef = useRef();
   const orderRef = useRef();
   const accountRef = useRef();
 
-  // useEffect(()=>{
-  //   document.title = 'Panel | Admin'
-  //   dispatch(getAdminAdmin())
-  // },[])
+  let {firstname, email} = JSON.parse(localStorage.getItem("userDetails"))
+  let adminToken = JSON.parse(localStorage.getItem("token")) || null;
+
+  useEffect(()=>{
+
+    if(adminToken==null){
+      console.log(adminToken)
+      navigate("/adminlogin");
+    }
+    let options = {
+      headers:{
+        authorization: adminToken
+      }
+    }
+    axios.get(`https://magenta-penguin-tie.cyclic.app/products`, options)
+    .then((res )=> setAllData(res.data));
+  },[])
 
   const handleRoute = ()=>{
-    // navigate('/')
+    dispatch(adminLogout)
+    navigate("/adminlogin");
   }
 
 
@@ -116,8 +132,8 @@ export default function AdminPage() {
             <Avatar border='2px' size={"xl"} src={"https://avatars.githubusercontent.com/u/98110085?v=4"}></Avatar>
           </Box>
           <Box textAlign={"center"} mt={"20px"} mb={"20px"}>
-            <Text>{"DemoName"}</Text>
-            <Text color={"black"}>{"DemoEmail"}</Text>
+            <Text>{firstname}</Text>
+            <Text color={"black"}>{email}</Text>
     
           </Box>
 
@@ -210,25 +226,25 @@ export default function AdminPage() {
         </TabList>
 
             {/* tab panals */}
-        <TabPanels pl={{ md: "32%", lg: "21%" }}  bg='#CBEDD5'>
+        <TabPanels pl={{ md: "32%", lg: "21%" }}  bg='#E6E6FA'>
           <TabPanel p={0}  >
-            {/* <Dashbord/> */}
-            Dashboard
+            <Dashbord allData={allData}/>
+            {/* Dashboard */}
           </TabPanel>
           <TabPanel p={0}>
-            {/* <Listing/> */}
-            Listing
+            <Listing allData={allData}/>
+            {/* Listing */}
           </TabPanel>
           <TabPanel p={0}>
-          Orders page
+            <Orders/>
           </TabPanel>
           <TabPanel p={0}>
             {/* <Customers/> */}
             Customers
           </TabPanel>
           <TabPanel p={0}>
-            {/* <AccountInfo/> */}
-            Account Info
+            <AccountInfo/>
+            {/* Account Info */}
           </TabPanel>
         </TabPanels>
       </Tabs>
