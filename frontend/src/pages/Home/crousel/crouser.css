@@ -6,7 +6,7 @@
 
 .home__crousel2{
     /* border:1px solid black; */
-    padding:1.5rem 5.3%;
+    padding:1.5rem 7%;
     margin:5rem 0;
 }
 .car_box{
@@ -14,6 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap:2rem;
 }
 .car_box>h1{
     

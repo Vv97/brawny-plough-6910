@@ -21,7 +21,9 @@ function App() {
         pauseOnHover
         theme="light"
       />
+      <Navbar/>
       <AllRoutes />
+      <Footer/>
     </div>
   );
 }

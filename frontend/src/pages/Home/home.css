@@ -195,9 +195,8 @@
 /* home email */
 .home__email{
     /* border:1px solid black; */
-    margin:0 0 2rem 0;
     background-color: #180e3b;
-    padding: 1rem 0;
+    padding: 5rem 0 2rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,7 +210,8 @@
     font-family: BegumRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     font-weight: lighter;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
 }
 .home__email>div>input{
     border: 0.5px solid red;
@@ -234,10 +234,10 @@
     text-align: center;
 }
 .home__email>div>p{
-    margin-top: 2rem;
+    margin-top: 4rem;
     text-align: center;
     color:white;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 /* home radio */
@@ -247,6 +247,12 @@
     justify-content: center;
     margin-top: 1.5rem;
     gap:4.5rem;
+}
+.home__radio>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.3rem;
 }
 .home__radio>div input{
     background-color:blueviolet;
