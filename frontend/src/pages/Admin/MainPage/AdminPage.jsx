@@ -58,7 +58,7 @@ export default function AdminPage() {
         authorization: adminToken
       }
     }
-    axios.get(`https://magenta-penguin-tie.cyclic.app/products`, options)
+    axios.get(`https://magenta-penguin-tie.cyclic.app/products?page=3`, options)
     .then((res )=> setAllData(res.data));
   },[])
 

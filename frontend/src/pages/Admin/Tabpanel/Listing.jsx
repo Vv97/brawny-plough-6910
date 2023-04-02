@@ -1,12 +1,16 @@
-import { Box, HStack, Heading, Image, Input, Select, Table, TableCaption, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
+import { Box, Button, HStack, Heading, Image, Input, Select, Table, TableCaption, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import EditModal from "../Comps/EditModal";
+import AddModal from "../Comps/addModal";
 
 const Listing = ({allData}) => {
   const [category, setCatogory] = React.useState("");
     console.log(allData, "adfadsf")
 
     const handleEdit = () => {
+
+    }
+    const handleAdd = () =>{
 
     }
 
@@ -20,11 +24,14 @@ const Listing = ({allData}) => {
         All Rings Data
       </Text>
       <HStack py={"20px"} justifyContent={"space-between"}>
+        <HStack>
         <Input
           placeholder="Search Product"
           width={"200px"}
           border={"1.5px solid purple"}
         />
+        <AddModal/>
+        </HStack>
         <HStack>
           <Select
             bg={"#BA55D3"}
@@ -87,7 +94,7 @@ const Listing = ({allData}) => {
                     <Td>{el.name}</Td>
                     <Td>{el.price}</Td>
                     <Td>{el.material}</Td>
-                    <Td><EditModal/></Td>
+                    <Td><EditModal item={el} id={el._id}/></Td>
                 </Tr>
             )) }
             
