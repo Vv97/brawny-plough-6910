@@ -1,39 +1,3 @@
-// import React from 'react';
-// import {Avatar, Box, Button, Divider, HStack, Heading, VStack} from "@chakra-ui/react"
-
-// const Admin = () => {
-//   return (
-//     <HStack >
-//         <VStack p={"20px"} bgColor={'pink.200'} h={"100%"} justifyContent={"flex-start"} mt={"0px"}>
-//             <Heading>Welcome!</Heading>
-//             <Avatar src='https://avatars.githubusercontent.com/u/98110085?s=40&v=4' size={"xl"} pb={"20px"}/>
-
-//             <Box borderBottom={"2px solid gray"} w={"100%"} h={"2px"}></Box>
-
-//             <VStack gap={2}>
-//                 <Button size={"sm"} variant={"unstyled"} px={4} w={"100%"} _hover={{bgColor:"red.300"}} m={0}>Dashboard</Button>
-//                 <Button size={"sm"} variant={"unstyled"} px={4} w={"100%"} _hover={{bgColor:"red.300"}}>Products</Button>
-//                 <Button size={"sm"} variant={"unstyled"} px={4} w={"100%"} _hover={{bgColor:"red.300"}}>Orders</Button>
-//                 <Button size={"sm"} variant={"unstyled"} px={4} w={"100%"} _hover={{bgColor:"red.300"}}>Account Info</Button>
-//                 <Divider/>
-//                 <Button variant={'solid'} colorScheme='red' size="sm">Logout</Button>
-//             </VStack>
-//         </VStack>
-//         <Box w={"100%"} h={"100vh"} border={"1px solid red"} justifyContent={"center"} alignItems={"flex-start"}>
-//             <Heading>Dashboard</Heading>
-//             <Box bgColor={"green.300"} h={"80vh"}>
-//                 <HStack gap={"150px"}>
-//                     <Heading>Men</Heading>
-//                     <Heading>Women</Heading>
-//                 </HStack>
-//             </Box>
-//         </Box>
-//     </HStack>
-//   )
-// }
-
-// export default Admin
-
 import React, { useEffect, useRef, useState } from "react";
 import {
   Text,
