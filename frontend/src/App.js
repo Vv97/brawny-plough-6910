@@ -1,16 +1,16 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import { AllRoutes } from './Routes/AllRoutes';
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
 import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      {/* <ToastContainer
+      <AllRoutes />
+      <ToastContainer
         position="top-center"
         autoClose={2000}
         hideProgressBar={false}
@@ -21,9 +21,7 @@ function App() {
         draggable
         pauseOnHover
         theme="light"
-      /> */}
-      <AllRoutes />
-      {/* <Footer/> */}
+      />
     </div>
   );
 }
