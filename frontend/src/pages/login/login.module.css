@@ -5,9 +5,8 @@
 }
 
 .login {
-  margin-top: 100px;
+  padding-top: 40px;
   width: 100%;
-  border: 1px solid green;
   background-color: rgb(249, 249, 250);
 }
 .loginWrapper {
