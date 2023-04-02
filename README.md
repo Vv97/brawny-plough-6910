@@ -60,7 +60,8 @@ Navigation Bar is the topmost layer or bar of our website. In this bar, you find
 
 
 It is a cart Page where you find the different kinds of the products which products you added in your cart. Take a look on that.
-<!-- ![image](https://i.ibb.co/tsmj9hS/Screenshot-295.png) -->
+
+![Screenshot (352)](https://user-images.githubusercontent.com/107980582/229373576-49f15a38-4f73-432b-bce3-0b646d1658ac.png)
 
 ## Footer
 
