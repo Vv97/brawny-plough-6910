@@ -81,5 +81,16 @@ const deleteProduct = async (req, res) => {
     };
 };
 
+const getProductById = async (req, res) => {
+    const { productID } = req.params;
+    console.log(productID)
+    try {
+        let data = await productModel.findOne({ _id: productID });
+        res.status(200).send({ produt: data })
+    } catch (error) {
+        res.status(400).send(error);
+    }
+};
 
-module.exports = { getProducts, addProduct, updateProduct, deleteProduct };
+
+module.exports = { getProducts, addProduct, updateProduct, deleteProduct, getProductById };
