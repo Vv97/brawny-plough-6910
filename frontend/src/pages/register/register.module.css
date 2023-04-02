@@ -6,11 +6,12 @@
 
 .Register {
   background-color: rgb(249, 249, 250);
+  padding: 20px 0;
 }
 
 .registerWrapper {
   max-width: 288px;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto 0 auto;
   /* border: 1px solid green; */
 }
 
