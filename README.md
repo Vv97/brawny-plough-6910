@@ -35,7 +35,7 @@ caratlane.com webiste looks very amazing and introduced with various type of lan
  
   <ul dir="auto">
  
- <ol dir="auto">admin email - priyank@admin.gmail.com</ol>
+ <ol dir="auto">admin email - vishalVerma@gmail.com</ol>
  <ol dir="auto">password - admin123</ol>
  
  </ul>
@@ -47,24 +47,24 @@ This report is provided by the Github language used stats. So, this is the total
 ### Homepage
 
 Homepage is one of the most important factor which also known by the name of Landing Page. There are different kinds of the Products and populer services are mentioned here. Take a look on it.
-![image](https://user-images.githubusercontent.com/97522154/208038198-80ece65b-59a6-42bc-aba6-238e8223e0f3.png)
+<!-- ![image](https://user-images.githubusercontent.com/97522154/208038198-80ece65b-59a6-42bc-aba6-238e8223e0f3.png) -->
 
 ### Navbar
 
 Navigation Bar is the topmost layer or bar of our website. In this bar, you find the various types of the menus like Brands, Sale, Makeup, HairCare, Login, Register, Add to Cart Page etc.
 
-![image](https://user-images.githubusercontent.com/97522154/208037197-8aa65996-50ee-4518-b64a-bf51f0e81242.png)
+<!-- ![image](https://user-images.githubusercontent.com/97522154/208037197-8aa65996-50ee-4518-b64a-bf51f0e81242.png) -->
 
-![image](https://user-images.githubusercontent.com/97522154/208038091-dfbe02c0-d7ae-4fce-88c6-5cab2a7d40d1.png)
+<!-- ![image](https://user-images.githubusercontent.com/97522154/208038091-dfbe02c0-d7ae-4fce-88c6-5cab2a7d40d1.png) -->
 
 It is a cart Page where you find the different kinds of the products which products you added in your cart. Take a look on that.
-![image](https://i.ibb.co/tsmj9hS/Screenshot-295.png)
+<!-- ![image](https://i.ibb.co/tsmj9hS/Screenshot-295.png) -->
 
 ## Footer
 
 As you know that every website have the header and footer. Also in this this website, we have a pritty footer which helps you to move the different kinds of the important pages.
 
-![image](https://user-images.githubusercontent.com/97522154/208039642-1f75bf50-33f3-4c47-81cd-24fda0a4ed0b.png)
+<!-- ![image](https://user-images.githubusercontent.com/97522154/208039642-1f75bf50-33f3-4c47-81cd-24fda0a4ed0b.png) -->
 
 So, this is the footer of our website clone. All the things in quite easy to use as well as mobile, teblet and desktop. We hope you like these things.
 
