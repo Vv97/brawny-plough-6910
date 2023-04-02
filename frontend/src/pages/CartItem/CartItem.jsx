@@ -1,77 +1,250 @@
-// import { CheckCircleIcon, SmallCloseIcon } from "@chakra-ui/icons";
-// import {
-//   Flex,
-//   Image,
-//   Text,
-//   Box,
-//   Circle,
-//   Heading,
-//   useToast,
-// } from "@chakra-ui/react";
-// import React from "react";
-// import { useDispatch } from "react-redux";
-// import { deleteToCart } from "../Redux/cart/cart.actions";
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Select,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
 
-// const CartItem = ({ image_link, name, price, id, brand }) => {
-//   const toast = useToast();
-//   console.log(id);
-//   const dispatch = useDispatch();
-//   const handleDelete = (id) => {
-//     toast({
-//       position: "top-left",
-//       duration: 1200,
-//       render: () => (
-//         <Flex
-//           color="white"
-//           border="4px solid white"
-//           p={"10px"}
-//           bgColor="green.400"
-//         >
-//           <CheckCircleIcon w={30} h={30} />
-//           <Text size="lg" ml="15px">{`${name} has been deleted!!!`}</Text>
-//         </Flex>
-//       ),
-//     });
+const CartItem = () => {
+  const [products, setProducts] = useState([])
+  const optArr = new Array(21).fill(1)
+  const quantArr = new Array(11).fill(1);
+  const navigate = useNavigate()
 
-//     dispatch(deleteToCart(id));
-//   };
-//   return (
-//     <Flex
-//       w="100%"
-//       justify="space-between"
-//       p="20px"
-//       borderBottom="1px solid gainsboro"
-//     >
-//       <Image display="block" src={image_link} w="100px" />
-//       <Box w="50%">
-//         <Text fontSize={"20px"} mb="20px">
-//           {name}
-//         </Text>
-//         <Text fontSize={"15px"} mb="20px">{`Brand: ${brand}`}</Text>
+  function getData() {
+    axios
+      .get('https://magenta-penguin-tie.cyclic.app/cart', {
+        headers: {
+          Authorization:
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1MjgwYWU0NWY4MWJlODkzYjBkZDciLCJpYXQiOjE2ODAyMDE3NjJ9.y88YsqEDM5sU_tLGcryhbaKrfNkF-ZI4fePxnHShQ2k',
+        },
+      })
+      .then((res) => {
+        setProducts(res.data)
+      })
+  }
 
-//         <Heading size="md">{`$${price}`}</Heading>
-//       </Box>
-//       <Box>
-//         <Circle
-//           as="button"
-//           bgColor="#f1f1f1"
-//           display="flex"
-//           justifyContent="center"
-//           alignItem="center"
-//           w="30px"
-//           p={["1", "1", "2"]}
-//           onClick={() => handleDelete(id)}
-//         >
-//           <SmallCloseIcon
-//             boxSize="1em"
-//             display="flex"
-//             justifyContent="center"
-//             alignItem="center"
-//           />
-//         </Circle>
-//       </Box>
-//     </Flex>
-//   );
-// };
+  useEffect(() => {
+    getData()
+  }, [])
 
-// export default CartItem;
+
+
+
+
+  function handleDelete(id) {
+
+    axios
+      .delete(`https://magenta-penguin-tie.cyclic.app/cart/${id}`, {
+        headers: {
+          Authorization:
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1MjgwYWU0NWY4MWJlODkzYjBkZDciLCJpYXQiOjE2ODAyMDE3NjJ9.y88YsqEDM5sU_tLGcryhbaKrfNkF-ZI4fePxnHShQ2k',
+        },
+      })
+      .then((res) => {
+        console.log(res.data)
+        getData()
+      })
+  }
+
+  function handleAddress(){
+
+    navigate("/cart/address");
+  }
+
+
+  return (
+    <Flex
+      flexWrap="wrap"
+      rowGap="20px"
+      minHeight="100vh"
+      bgColor="#f1f5f9"
+      justifyContent="space-around"
+      p="20px 0px"
+    >
+      <VStack w={{ md: '700px', base: '500px' }}>
+        <Text fontWeight={600}>
+          Total ({products.length} Items) : ₹{' '}
+          {products.length > 0 &&
+            products.reduce((acc, cur) => {
+              return acc + +cur.price
+            }, 0)}
+        </Text>
+        {products.length > 0 &&
+          products.map(
+            ({ image1, name,  _id, price, size, discount }, ind) => {
+              return (
+                <Flex
+                key={ind}
+                  w="100%"
+                  justifyContent="space-around"
+                  p="20px 10px"
+                  mb="10px"
+                  bg="#F7FAFC"
+                  borderRadius="5px"
+                  flexDirection={{ md: 'row', base: 'column' }}
+                  rowGap="20px"
+                  minH="200px"
+                  border="1px solid #845ef7"
+                >
+                  <Image
+                    outline="2px solid #845ef7"
+                    borderRadius="5px"
+                    w="120px"
+                    h="150px"
+                    m={{ md: '0px 20px 0px 0px', base: '0px auto' }}
+                    src={image1}
+                    alt={name}
+                  />
+
+                  <VStack>
+                    <Text fontWeight={600}>
+                      Ripple Dazzle Diamond Ring JR03281-YGP600
+                    </Text>
+
+                    <Flex
+                      minHeight="50px"
+                      p="20px"
+                      gap="20px"
+                      alignItems="center"
+                      flexDirection={{ md: 'row', base: 'column' }}
+                      m={{ md: '0px 20px 0px 0px', base: '0px auto' }}
+                    >
+                      <Flex w="150px">
+                        <Text w="60px">Size :</Text>
+                        <Select w="80px">
+                          {optArr.map((ele, ind) => {
+                            return (
+                              <option
+                                key={ind}
+                                placeholder={size}
+                                value={ind + 5}
+                              >
+                                {' '}
+                                {ind + 5}
+                              </option>
+                            )
+                          })}
+                        </Select>
+                      </Flex>
+
+                      <Flex w="180px">
+                        <Text w="80px">Quantity :</Text>
+                        <Select w="80px">
+                          {quantArr.map((ele, ind) => {
+                            return (
+                              <option key={ind} value={ind + 1}>
+                                {' '}
+                                {ind + 1}
+                              </option>
+                            )
+                          })}
+                        </Select>
+                      </Flex>
+                    </Flex>
+
+                    <Flex
+                      flexDirection={{ md: 'row', base: 'column' }}
+                      gap="20px"
+                      alignItems="center"
+                    >
+                      <Text
+                        border="1px solid #845ef7"
+                        p="2px 25px"
+                        borderRadius="5px"
+                        fontSize="15px"
+                        fontWeight="600"
+                      >
+                        ₹ {price}
+                      </Text>
+                      <Text
+                        as="del"
+                        border="1px solid #845ef7"
+                        p="2px 25px"
+                        borderRadius="5px"
+                        fontSize="15px"
+                        fontWeight="600"
+                      >
+                        ₹ {(+price * +discount) / 100 + +price}
+                      </Text>
+                      <Text
+                        as="mark"
+                        border="1px solid #845ef7"
+                        p="2px 25px"
+                        borderRadius="5px"
+                        fontSize="15px"
+                        fontWeight="600"
+                      >
+                        Save ₹{(+price * +discount) / 100}
+                      </Text>
+                      <Button border="none" borderBottom="2px solid #845ef7" _hover={{ bg: '#845ef7', color: '#fff', border:"none" }}  cursor="pointer" onClick={() => handleDelete(_id)}>Remove</Button>
+                    </Flex>
+                  </VStack>
+                </Flex>
+              )
+            },
+          )}
+      </VStack>
+      <VStack
+        border="1px solid #845ef7"
+        w="300px"
+        h="300px"
+        borderRadius="5px"
+      >
+        <Text>Order Summary</Text>
+
+        <Flex
+          bg="#F7FAFC"
+          p="20px 10px"
+          textAlign="left"
+          borderRadius="5px"
+          justifyContent="space-between"
+          columnGap="10px"
+        >
+          <VStack textAlign="left" fontWeight={600}>
+            <Text>Subtotal</Text>
+            <Text>You Saved</Text>
+            <Text>Delivery Charge (Standard)</Text>
+            <Text>TOTAL COST</Text>
+          </VStack>
+
+          <VStack>
+            <Text>
+              ₹{' '}
+              {products.length > 0 &&
+                products.reduce((acc, cur) => {
+                  return acc + +cur.price
+                }, 0)}
+            </Text>
+            <Text color="#8d62f9">
+              ₹{' '}
+              {products.length > 0 &&
+                products.reduce((acc, cur) => {
+                  return acc + ((+cur.price) * (+cur.discount)) / 100
+                }, 0)}
+            </Text>
+
+            <Text color="#8d62f9" >FREE</Text>
+            <Text>
+              ₹
+              {products.length > 0 &&
+                products.reduce((acc, cur) => {
+                  return acc + +cur.price
+                }, 0)}
+            </Text>
+          </VStack>
+        </Flex>
+
+        <Button onClick={handleAddress} cursor="pointer" border="none" borderBottom="2px solid #845ef7"  _hover={{ bg: '#845ef7', color: '#fff' ,border:"none" }} >Checkout Securely</Button>
+      </VStack>
+    </Flex>
+  )
+}
+
+export default CartItem
