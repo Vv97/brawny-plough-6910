@@ -7,6 +7,7 @@ import { Register } from "../pages/register/Register";
 import { Login } from "../pages/login/Login";
 import CartItem from "../pages/CartItem/CartItem";
 import AdminLogin from "../pages/Admin/MainPage/AdminLogin";
+import SingleProduct from "../pages/product/SingleProduct";
 
 
 export const AllRoutes = () => {
@@ -18,7 +19,8 @@ export const AllRoutes = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             {/* <Route path="/cart" element={<CartItem />} /> */}
-            <Route path="/adminlogin" element={<AdminLogin/>} />
+            <Route path="/adminlogin" element={<AdminLogin />} />
+            <Route path="/singleproduct/:id" element={<SingleProduct />} />
         </Routes>
     );
 };
