@@ -22,7 +22,7 @@ function App() {
         pauseOnHover
         theme="light"
       /> */}
-      {/* <AllRoutes /> */}
+      <AllRoutes />
       {/* <Footer/> */}
     </div>
   );
