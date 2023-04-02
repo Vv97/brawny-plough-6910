@@ -55,9 +55,9 @@ Homepage is one of the most important factor which also known by the name of Lan
 Navigation Bar is the top most layer or bar of our website. In this bar, you find the various types of the menus like Brands, Sale, EARRINGS,BRACELETS & BANGLES, Login, Register, Add to Cart Page etc.
 ![Screenshot (351)](https://user-images.githubusercontent.com/107980582/229374199-9f426418-8ff2-402b-82e0-8c787c15697b.png)
 
+![Screenshot (344)](https://user-images.githubusercontent.com/107980582/229374566-b766ce57-f3b6-40ae-98d7-01a6591e5e0f.png)
 
-![Screenshot (344)](https://user-images.githubusercontent.com/107980582/229372428-cf4d02cf-8a9a-47ae-90dd-938635d2dde3.![Uploading Screenshot (351).png…]()
-png)
+
 
 ![Screenshot (348)](https://user-images.githubusercontent.com/107980582/229372837-4f329133-069f-4a5a-845f-79eb1644f841.png)
 
