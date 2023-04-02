@@ -52,8 +52,12 @@ Homepage is one of the most important factor which also known by the name of Lan
 
 ### Navbar
 
-Navigation Bar is the topmost layer or bar of our website. In this bar, you find the various types of the menus like Brands, Sale, Makeup, HairCare, Login, Register, Add to Cart Page etc.
-![Screenshot (344)](https://user-images.githubusercontent.com/107980582/229372428-cf4d02cf-8a9a-47ae-90dd-938635d2dde3.png)
+Navigation Bar is the top most layer or bar of our website. In this bar, you find the various types of the menus like Brands, Sale, EARRINGS,BRACELETS & BANGLES, Login, Register, Add to Cart Page etc.
+![Screenshot (351)](https://user-images.githubusercontent.com/107980582/229374199-9f426418-8ff2-402b-82e0-8c787c15697b.png)
+
+
+![Screenshot (344)](https://user-images.githubusercontent.com/107980582/229372428-cf4d02cf-8a9a-47ae-90dd-938635d2dde3.![Uploading Screenshot (351).png…]()
+png)
 
 ![Screenshot (348)](https://user-images.githubusercontent.com/107980582/229372837-4f329133-069f-4a5a-845f-79eb1644f841.png)
 
@@ -90,3 +94,6 @@ We using different kinds of the technologies to make this website. These things 
 - [x] Sumit Kumar - [GitHub Profile](https://github.com/sumitkprasad123)
 - [x] Arun Kumar Rana - [GitHub Profile](https://github.com/arun24hrs)
 - [x] Satyaranjan Maity - [GitHub Profile](https://github.com/Satyaranjan8414)
+
+
+THANK YOU ❤
