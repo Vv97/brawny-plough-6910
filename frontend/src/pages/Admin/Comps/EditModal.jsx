@@ -94,7 +94,7 @@ const EditModal = ({item, id}) => {
             <Input value={title} name={"title"} onChange={(e)=>handleChange(e)} placeholder="Title"/>
             <Input value={price} name={"price"} onChange={(e)=>handleChange(e)} placeholder="Price"/>
             <Input value={material} name={"material"} onChange={(e)=>handleChange(e)} placeholder="Material"/>
-            
+
             </VStack>
           </ModalBody>
 
@@ -112,3 +112,4 @@ const EditModal = ({item, id}) => {
 };
 
 export default EditModal;
+

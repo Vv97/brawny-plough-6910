@@ -25,7 +25,6 @@ import Dashbord from "../Tabpanel/Dashboard";
 // import Customers from "../Tabpanel/Customers";
 import AccountInfo from "../Tabpanel/AccountInfo";
 import { useDispatch } from "react-redux";
-// import { getAdminAdmin } from "../../Redux/admin/admin.action";
 import { Link, useNavigate } from "react-router-dom";
 import caratLogo from "../../../utils/Images/caratLogo.png"
 import { adminLogout } from "../../../redux/adminAuth/api";
