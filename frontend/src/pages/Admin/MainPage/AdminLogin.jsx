@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import { Input } from "@chakra-ui/input";
 import { Flex, Heading, Text, VStack, Box } from "@chakra-ui/layout";
 import caratLogo from "../../../utils/Images/caratLogo.png";
 import axios from "axios"
+import {useNavigate} from "react-router-dom"
+import { adminLogin } from "../../../redux/adminAuth/api";
+import { useDispatch } from "react-redux";
 
 
 const AdminLogin = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [loginDetails, setLoginDetails] = React.useState({
     email: "",
     password: "",
   });
+
 
   const handleChange = (e) => {
     const newDetails = {
@@ -21,9 +27,23 @@ const AdminLogin = () => {
     setLoginDetails(newDetails);
   };
 
+
   const handleLogin = () =>{
-    let data = axios.get(`https://magenta-penguin-tie.cyclic.app/products`);
-    console.log(data)
+    // let obj = {
+    //   headers: {
+    //     authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI4NTcwNTRiODRjNmUzMDM5ZmVlOTEiLCJpYXQiOjE2ODAzNjUzMzN9.8B3BEaNQ4O515t_sOw6FId0HbKz-qBky9utDEPJ6dmI"
+    //   }
+    // };
+    // let data = axios.get(`https://magenta-penguin-tie.cyclic.app/products`, obj)
+    // .then((res )=> console.log(res.data))
+
+    dispatch(adminLogin(loginDetails)).then((res) => {
+      if (res) {
+        navigate("/admin");
+      }
+    });
+    
+    
   }
 
   return (
@@ -85,34 +105,6 @@ const AdminLogin = () => {
             >
               Sign In
             </Button>
-            {/* <Flex
-        alignItems={"center"}
-        p={"1px"}
-        paddingLeft={"15px"}
-        borderRadius={"5px"}
-        bgColor={"facebook.400"}
-        color={"#fff"}
-        fontWeight={"semibold"}
-        justifyContent={"space-between"}
-        _hover={{ opacity: "85%" }}
-      >
-        Sign in with Facebook
-        <Image src={fb} maxH={"40px"} p="0px" />
-      </Flex>
-      <Flex
-        alignItems={"center"}
-        p={"3px"}
-        paddingLeft={"15px"}
-        borderRadius={"5px"}
-        bgColor={"red.500"}
-        color={"#fff"}
-        fontWeight={"semibold"}
-        justifyContent={"space-between"}
-        _hover={{ opacity: "85%" }}
-      >
-        Sign in with Google
-        <Image src={google} maxH={"34px"} p="0px" bgColor="red.400" />
-      </Flex> */}
           </VStack>
         </Flex>
       </Box>
