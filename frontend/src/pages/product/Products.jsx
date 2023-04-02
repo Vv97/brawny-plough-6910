@@ -57,7 +57,7 @@ const Products = () => {
         className="filter-navbar"
         bg="#b3d4fc"
         h="80px"
-        // border="1px red solid"
+        // 
         display="flex"
         justifyContent="space-between"
       >
@@ -123,14 +123,15 @@ const Products = () => {
           </Select>
         </Box>
       </Box>
-      <Box border="1px red solid" m="25px" display="flex">
+      <Box  m="25px" display="flex" >
         <Box
           className="filter"
           width="25%"
           boxShadow=" rgba(0, 0, 0, 0.24) 0px 3px 8px"
-          ml="10px"
+                  ml="10px"
+                  
         >
-          <Box border="1px red solid" w="90%" m="auto" mt="10px">
+          <Box  w="90%" m="auto" mt="10px">
             <Center bg="#F6F3F9" padding="10px" borderRadius="20%">
               {" "}
               Filter By{" "}
@@ -229,7 +230,7 @@ const Products = () => {
         <Grid
           templateColumns="repeat(3,1fr)"
           className="product-list"
-          border="1px red solid"
+          border="1px solid black"
           ml="30px"
           gap="10px"
               >
@@ -238,7 +239,7 @@ const Products = () => {
           {productData.length > 0 && productData.map((prod) => {
             
             return (
-            <GridItem onClick={() => prodFun(prod._id)} key={prod.price} m="15px" border="1px red solid">
+            <GridItem onClick={() => prodFun(prod._id)} key={prod.price} m="15px" >
                 <Box>
                     
                 <Image
