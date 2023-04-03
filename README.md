@@ -25,8 +25,10 @@ caratlane.com webiste looks very amazing and introduced with various type of lan
  <ol dir="auto">◉ Sort By Category</ol>
  <ol dir="auto">◉ Cart Functionality (like adding an item and removing) </ol>
  <ol dir="auto">◉ Admin Page</ol>
- <ol dir="auto">◉ Admin can add a product product Will be shown on the latest page </ol>
+ <ol dir="auto">◉ Admin can add a product product Will be shown on the Home page </ol>
  <ol dir="auto">◉ Login and Sign Up </ol>
+  <ol dir="auto">◉ Checkout Page</ol>
+ 
  </ul>
  
  ## Admin account details(Admin Email and Password)
