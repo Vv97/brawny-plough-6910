@@ -4,7 +4,7 @@ import { AllRoutes } from './Routes/AllRoutes';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { ToastContainer } from "react-toastify"
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
