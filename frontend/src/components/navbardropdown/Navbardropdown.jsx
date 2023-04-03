@@ -9,7 +9,7 @@ export const Navbardropdown = () => {
       <div className={styles.navdropWrapper}>
         <ul className={styles.navdroplist}>
           <li>
-            <Link>
+            <Link to="/products">
               <div className={styles.navdropheader}>
                 <p>BEST SELLERS</p>
               </div>

@@ -21,7 +21,10 @@ const Navbar = () => {
       <div id="nav__top"></div>
       <div id="nav__medium">
         <div id="nav__logo">
-          <img src={logo} alt="logo" height="100%" width="100%" />
+          <Link to="/">
+            {" "}
+            <img src={logo} alt="logo" height="100%" width="100%" />
+          </Link>
         </div>
 
         <div id="nav__menu">
