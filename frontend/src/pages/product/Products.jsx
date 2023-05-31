@@ -16,18 +16,16 @@ import { ImHome3 } from "react-icons/im";
 import { FcVideoCall } from "react-icons/fc";
 import { BsHeart } from "react-icons/bs";
 import axios from "axios";
-import SingleProduct from "./SingleProduct"
+import SingleProduct from "./SingleProduct";
 import { Navigate, useNavigate } from "react-router-dom";
 const Products = () => {
   const [productData, setProductData] = useState([]);
-    const navigate = useNavigate()
-    const prodFun = (id) => {
-        // console.log("id", id)
-        
-        navigate(`/singleproduct/${id}`)
-       
-        
-    }
+  const navigate = useNavigate();
+  const prodFun = (id) => {
+    // console.log("id", id)
+
+    navigate(`/singleproduct/${id}`);
+  };
   useEffect(() => {
     // fetch("https://magenta-penguin-tie.cyclic.app/products", {
     //     headers: {
@@ -42,11 +40,12 @@ const Products = () => {
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1MjgwYWU0NWY4MWJlODkzYjBkZDciLCJpYXQiOjE2ODAyMDE3NjJ9.y88YsqEDM5sU_tLGcryhbaKrfNkF-ZI4fePxnHShQ2k",
         },
       })
-      .then((res) => setProductData(res.data));
+      .then((res) => {
+        setProductData(res.data.products);
+      });
     //   console.log(productData[0])
   }, []);
 
-    
   return (
     <Box>
       <Image
@@ -57,13 +56,12 @@ const Products = () => {
         className="filter-navbar"
         bg="#b3d4fc"
         h="80px"
-        // 
+        //
         display="flex"
         justifyContent="space-between"
       >
         <Flex
           direction="row"
-          
           gap="15px"
           fontSize="13px"
           padding="20px"
@@ -115,7 +113,7 @@ const Products = () => {
             New In
           </Center>
         </Flex>
-        <Box className="filter-sort" padding="20px">
+        <Box className="filter-sort">
           <Select placeholder="Sort by:Featured" fontSize="13px">
             <option value="option1">Discount</option>
             <option value="option2">Price High to Low</option>
@@ -123,15 +121,14 @@ const Products = () => {
           </Select>
         </Box>
       </Box>
-      <Box  m="25px" display="flex" >
+      <Box display="flex" maxWidth="1298px" margin="18px auto">
         <Box
           className="filter"
-          width="25%"
+          width="40%"
           boxShadow=" rgba(0, 0, 0, 0.24) 0px 3px 8px"
-                  ml="10px"
-                  
+          ml="10px"
         >
-          <Box  w="90%" m="auto" mt="10px">
+          <Box w="90%" m="auto" mt="10px">
             <Center bg="#F6F3F9" padding="10px" borderRadius="20%">
               {" "}
               Filter By{" "}
@@ -228,80 +225,81 @@ const Products = () => {
         </Box>
 
         <Grid
+          border="1px solid red"
           templateColumns="repeat(3,1fr)"
           className="product-list"
-          border="1px solid black"
           ml="30px"
           gap="10px"
-              >
-                
-            
-          {productData.length > 0 && productData.map((prod) => {
-            
-            return (
-            <GridItem onClick={() => prodFun(prod._id)} key={prod.price} m="15px" >
-                <Box>
-                    
-                <Image
-                  boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
-                  cursor="pointer"
-                  width="100%"
-                  src={prod.image1}
-                ></Image>
-              </Box>
-              <Box>
-                <Flex justifyContent="space-between" mr="15px">
+        >
+          {productData.length > 0 &&
+            productData.map((prod) => {
+              return (
+                <GridItem
+                  onClick={() => prodFun(prod._id)}
+                  key={prod.price}
+                  m="15px"
+                >
                   <Box>
-                    <Text as="b">
+                    <Image
+                      boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+                      cursor="pointer"
+                      width="100%"
+                      src={prod.image1}
+                    ></Image>
+                  </Box>
+                  <Box>
+                    <Flex justifyContent="space-between" mr="15px">
+                      <Box>
+                        <Text as="b">
+                          {" "}
+                          <BiRupee />
+                          {prod.price - (prod.price * prod.discount) / 100}
+                        </Text>{" "}
+                        <Text fontSize="12px" as="del">
+                          {prod.price}
+                        </Text>
+                      </Box>
+
+                      <Box cursor="pointer">
+                        {" "}
+                        <BsHeart />{" "}
+                      </Box>
+                    </Flex>
+                    <Text color="gray" mt="0">
                       {" "}
-                      <BiRupee />
-                      {prod.price - prod.price*prod.discount/100}
-                    </Text>{" "}
-                    <Text fontSize="12px" as="del">
-                      {prod.price}
+                      Splendid Stary Diamond Ring{" "}
                     </Text>
                   </Box>
-
-                  <Box cursor="pointer">
-                    {" "}
-                    <BsHeart />{" "}
+                  <Box display="flex" justifyContent="space-between" m="5px">
+                    <Button
+                      size="sm"
+                      cursor="pointer"
+                      border="1px purple solid"
+                      padding="10px"
+                      color="purple"
+                      fontSize="11px"
+                      borderRadius="8px"
+                    >
+                      {" "}
+                      <ImHome3 />
+                      Book Try At Home{" "}
+                    </Button>
+                    <Button
+                      size="sm"
+                      cursor="pointer"
+                      border="1px green solid"
+                      padding="10px"
+                      color="green"
+                      fontSize="11px"
+                      borderRadius="8px"
+                    >
+                      {" "}
+                      <FcVideoCall /> Live Video Call{" "}
+                    </Button>
                   </Box>
-                </Flex>
-                <Text color="gray" mt="0">
-                  {" "}
-                  Splendid Stary Diamond Ring{" "}
-                </Text>
-              </Box>
-              <Box display="flex" justifyContent="space-between" m="5px">
-                <Button
-                  size="sm"
-                  cursor="pointer"
-                  border="1px purple solid"
-                  padding="10px"
-                  color="purple"
-                  fontSize="11px"
-                  borderRadius="8px"
-                >
-                  {" "}
-                  <ImHome3 />
-                  Book Try At Home{" "}
-                </Button>
-                <Button
-                  size="sm"
-                  cursor="pointer"
-                  border="1px green solid"
-                  padding="10px"
-                  color="green"
-                  fontSize="11px"
-                  borderRadius="8px"
-                >
-                  {" "}
-                  <FcVideoCall /> Live Video Call{" "}
-                </Button>
-              </Box>
-                  </GridItem>
-            )
-          })}
+                </GridItem>
+              );
+            })}
         </Grid>
       </Box>
     </Box>

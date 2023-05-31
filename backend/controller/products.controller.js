@@ -38,8 +38,12 @@ const getProducts = async (req, res) => {
 
 
     try {
+        let totalProductCount = await productModel.countDocuments(obj)
         let productsData = await productModel.find(obj).limit(limit).skip(skip);
-        res.status(200).send(productsData);
+        res.status(200).send({
+            total: totalProductCount,
+            products: productsData
+        });
     } catch (error) {
         res.status(400).send({ mssg: error.message });
     };

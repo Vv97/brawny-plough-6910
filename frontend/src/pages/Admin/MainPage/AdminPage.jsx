@@ -26,46 +26,44 @@ import Dashbord from "../Tabpanel/Dashboard";
 import AccountInfo from "../Tabpanel/AccountInfo";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import caratLogo from "../../../utils/Images/caratLogo.png"
+import caratLogo from "../../../utils/Images/caratLogo.png";
 import { adminLogout } from "../../../redux/adminAuth/api";
 import axios from "axios";
 import Listing from "../Tabpanel/Listing";
 import Orders from "../Tabpanel/Orders";
 
-
 export default function AdminPage() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   let [allData, setAllData] = useState([]);
-  const dispatch = useDispatch()
-  const prodRef= useRef();
+  const dispatch = useDispatch();
+  const prodRef = useRef();
   const dashboardRef = useRef();
   const customerRef = useRef();
   const orderRef = useRef();
   const accountRef = useRef();
 
-  let {firstname, email} = JSON.parse(localStorage.getItem("userDetails"))
+  let { firstname, email } = JSON.parse(localStorage.getItem("userDetails"));
   let adminToken = JSON.parse(localStorage.getItem("token")) || null;
 
-  useEffect(()=>{
-
-    if(adminToken==null){
-      console.log(adminToken)
+  useEffect(() => {
+    if (adminToken == null) {
+      console.log(adminToken);
       navigate("/adminlogin");
     }
     let options = {
-      headers:{
-        authorization: adminToken
-      }
-    }
-    axios.get(`https://magenta-penguin-tie.cyclic.app/products?page=3`, options)
-    .then((res )=> setAllData(res.data));
-  },[])
+      headers: {
+        authorization: adminToken,
+      },
+    };
+    axios
+      .get(`https://magenta-penguin-tie.cyclic.app/products?page=3`, options)
+      .then((res) => setAllData(res.data.products));
+  }, []);
 
-  const handleRoute = ()=>{
-    dispatch(adminLogout)
+  const handleRoute = () => {
+    dispatch(adminLogout);
     navigate("/adminlogin");
-  }
-
+  };
 
   return (
     <>
@@ -84,23 +82,20 @@ export default function AdminPage() {
           h={"100vh"}
         >
           <Box width={"60%"} m={"auto"} mt={0} mb={0}>
-            <Image
-              alt="logo"
-              src={caratLogo}
-              width={"120px"}
-            ></Image>
+            <Image alt="logo" src={caratLogo} width={"120px"}></Image>
           </Box>
 
           <Box textAlign={"center"} mt={"20px"}>
-            <Avatar border='2px' size={"xl"} src={"https://avatars.githubusercontent.com/u/98110085?v=4"}></Avatar>
+            <Avatar
+              border="2px"
+              size={"xl"}
+              src={"https://avatars.githubusercontent.com/u/98110085?v=4"}
+            ></Avatar>
           </Box>
           <Box textAlign={"center"} mt={"20px"} mb={"20px"}>
             <Text>{firstname}</Text>
             <Text color={"black"}>{email}</Text>
-    
           </Box>
-
-          
 
           <Tab
             ref={dashboardRef}
@@ -148,7 +143,6 @@ export default function AdminPage() {
             ref={customerRef}
             mb={"5px"}
             borderRadius={"5px"}
-           
             // transition={"0.8s"}
             _selected={{
               color: "white",
@@ -182,37 +176,37 @@ export default function AdminPage() {
             borderRadius={"5px"}
             colorScheme={"red"}
             p={"8px"}
-           onClick={handleRoute}
+            onClick={handleRoute}
           >
             Logout
           </Button>
         </TabList>
 
-            {/* tab panals */}
-        <TabPanels pl={{ md: "32%", lg: "21%" }}  bg='#E6E6FA'>
-          <TabPanel p={0}  >
-            <Dashbord allData={allData}/>
+        {/* tab panals */}
+        <TabPanels pl={{ md: "32%", lg: "21%" }} bg="#E6E6FA">
+          <TabPanel p={0}>
+            <Dashbord allData={allData} />
             {/* Dashboard */}
           </TabPanel>
           <TabPanel p={0}>
-            <Listing allData={allData}/>
+            <Listing allData={allData} />
             {/* Listing */}
           </TabPanel>
           <TabPanel p={0}>
-            <Orders/>
+            <Orders />
           </TabPanel>
           <TabPanel p={0}>
             {/* <Customers/> */}
             Customers
           </TabPanel>
           <TabPanel p={0}>
-            <AccountInfo/>
+            <AccountInfo />
             {/* Account Info */}
           </TabPanel>
         </TabPanels>
       </Tabs>
 
-            {/* hambarger side manu bar */}
+      {/* hambarger side manu bar */}
       <Box
         display={{ base: "flex", md: "none" }}
         justifyContent={"space-between"}
@@ -233,8 +227,11 @@ export default function AdminPage() {
         />
         <Box>
           <Menu>
-            <MenuButton pr='15px'>
-              <Avatar  src={'https://avatars.githubusercontent.com/u/110043714?v=4'} name={'Admin'}></Avatar>
+            <MenuButton pr="15px">
+              <Avatar
+                src={"https://avatars.githubusercontent.com/u/110043714?v=4"}
+                name={"Admin"}
+              ></Avatar>
             </MenuButton>
             <MenuList backgroundColor={"#9258bf"} border={"1px solid #9258bf"}>
               <MenuItem backgroundColor={"#9258bf"}>
@@ -265,16 +262,13 @@ export default function AdminPage() {
                 >
                   {/* {" "}
                   <FiLogOut />{" "} */}
-                  <Link  to='/'>
-                    Logout
-                  </Link>
+                  <Link to="/">Logout</Link>
                 </Box>
               </MenuItem>
             </MenuList>
           </Menu>
         </Box>
       </Box>
-
     </>
-  )
+  );
 }
